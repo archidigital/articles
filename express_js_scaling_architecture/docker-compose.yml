@@ -1,0 +1,12 @@
+version: "3.6"
+services:
+    postgresqlDB:
+        image: postgres:latest
+        container_name: postgres_container_ab
+        restart: always
+        ports:
+            - 5432:5432
+        env_file:
+            - .env
+volumes:
+    postgresql_db_data:
